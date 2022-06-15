@@ -30,5 +30,15 @@
 <script>
     // Initializing gun and connecting to other peers in the network, one in my local network and one in the public network
     var gun = Gun(['http://localhost:8765/gun', 'https://gun-manhattan.herokuapp.com/gun']);
+    var user = gun.user();
+
+    $('#up').on('click', function(e){
+    user.create($('#alias').val(), $('#pass').val());
+    });
+
+    $('#sign').on('submit', function(e){
+    e.preventDefault();
+    user.auth($('#alias').val(), $('#pass').val());
+    });
 </script>
 </html>
