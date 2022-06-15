@@ -23,4 +23,12 @@
     </form>
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+<!-- script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script -->
+<script>
+    // Initializing gun and connecting to other peers in the network, one in my local network and one in the public network
+    var gun = Gun(['http://localhost:8765/gun', 'https://gun-manhattan.herokuapp.com/gun']);
+</script>
 </html>
